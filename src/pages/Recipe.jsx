@@ -27,7 +27,7 @@ const Recipe = () => {
 
     const getRecipeData = async () => {
       try {
-        const result = await axios.get(`http://localhost:8080/api/recipe/getrecipe/${id}`, {
+        const result = await axios.get(`https://recipe-back-kygs.onrender.com/api/recipe/getrecipe/${id}`, {
           headers: {
             Authorization: localStorage.getItem('authToken'),
           },

@@ -30,7 +30,7 @@ const Profile = () => {
   useEffect(() => {
     const fetchUserRecipes = async () => {
       try {
-        const response = await axios.get('http://localhost:8080/api/recipe/userrecipes', {
+        const response = await axios.get('https://recipe-back-kygs.onrender.com/api/recipe/userrecipes', {
           headers: {
             Authorization: localStorage.getItem("authToken")
           }
@@ -91,7 +91,7 @@ const Profile = () => {
 
   const createRecipe = async () => {
     try {
-      const result = await axios.post("http://localhost:8080/api/recipe/createrecipe", { ...formData, createdBy: user._id }, {
+      const result = await axios.post("https://recipe-back-kygs.onrender.com/api/recipe/createrecipe", { ...formData, createdBy: user._id }, {
         headers: {
           Authorization: localStorage.getItem("authToken")
         }
@@ -107,7 +107,7 @@ const Profile = () => {
 
   const editRecipe = async () => {
     try {
-      const result = await axios.put("http://localhost:8080/api/recipe/updaterecipe", { ...formData }, {
+      const result = await axios.put("https://recipe-back-kygs.onrender.com/api/recipe/updaterecipe", { ...formData }, {
         headers: {
           Authorization: localStorage.getItem("authToken")
         }
@@ -141,7 +141,7 @@ const Profile = () => {
 
   const handleDelete = async (rcp) => {
     try {
-      await axios.delete(`http://localhost:8080/api/recipe/deleterecipe/${rcp._id}`, {
+      await axios.delete(`https://recipe-back-kygs.onrender.com/api/recipe/deleterecipe/${rcp._id}`, {
         headers: {
           Authorization: localStorage.getItem("authToken"),
           createdBy: rcp.createdBy

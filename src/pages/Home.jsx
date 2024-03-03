@@ -15,7 +15,7 @@ const Home = () => {
         const getRecipes = async () => {
             try {
                 setLoading(true)
-                const result = await axios.get("http://localhost:8080/api/recipe/getrecipes", {
+                const result = await axios.get("https://recipe-back-kygs.onrender.com/api/recipe/getrecipes", {
                     headers: {
                         Authorization: localStorage.getItem("authToken")
                     }

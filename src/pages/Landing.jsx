@@ -10,7 +10,7 @@ const Landing = () => {
     async function getUserDetails(){
             try {
                 const authToken=localStorage.getItem("authToken")
-                const result = await axios.get("http://localhost:8080/api/user/getuser",{
+                const result = await axios.get("https://recipe-back-kygs.onrender.com/api/user/getuser",{
                     headers:{
                         Authorization:authToken
                     }

@@ -38,7 +38,7 @@ export default function SignUp() {
 
     if (!newErrors.email && !newErrors.password) {
       try {
-        const result = await axios.post('http://localhost:8080/api/user/signup',{...formData})
+        const result = await axios.post('https://recipe-back-kygs.onrender.com/api/user/signup',{...formData})
         console.log(result)
         toast.success("Account Created!\nHead to Sign In :) ",{
           duration: 3000,
