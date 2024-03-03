@@ -6,6 +6,7 @@ import { useEffect, useState } from 'react';
 import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
 import ReplyIcon from '@mui/icons-material/Reply';
+import recipeImg from "../static/recipe.jpeg"
 const Recipe = () => {
   const [recipe, setRecipe] = useState(null);
   const { allRecipes } = useRecipe();
@@ -55,7 +56,7 @@ const Recipe = () => {
           height: '100vh',
           width: '100vw',
           padding: 2,
-          backgroundImage: 'url("../../static/ORFF2A0.jpg")',
+          backgroundImage: `url(${recipeImg})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}

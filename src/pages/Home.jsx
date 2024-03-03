@@ -4,6 +4,7 @@ import NavBar from '../components/NavBar'
 import { useNavigate } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { useRecipe } from '../context/recipeContext'
+import homeImg from "../static/homeimg.jpeg"
 import axios from 'axios'
 const Home = () => {
     const navigate = useNavigate()
@@ -39,7 +40,7 @@ const Home = () => {
         <>
             <NavBar home={true}></NavBar>
             <Box width={"100vw"} height={"350px"} sx={{
-                backgroundImage: "url('../../static/homeimg.jpeg')",
+                backgroundImage: `url(${homeImg})`,
                 backgroundRepeat: "no-repeat", backgroundSize: "100%", backgroundPositionY: "center"
             }} >
             </Box>

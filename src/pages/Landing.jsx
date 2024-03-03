@@ -3,7 +3,7 @@ import NavBar from "../components/NavBar"
 import { useUser } from "../context/userContext"
 import axios from "axios"
 import { useEffect } from "react"
-
+import landingImg from "../static/landing.jpeg"
 const Landing = () => {
   const {setUser,setAuth,isAuth}=useUser()
   useEffect(() => {
@@ -43,7 +43,7 @@ const Landing = () => {
     height={"100vh"}
     sx={{backgroundColor: "linear-gradient(103.3deg, rgb(253, 109, 104) 7.7%, rgb(248, 150, 105) 90.8%)"}}
     >
-      <img style={{position:"absolute", width:'1500px', zIndex:'-1', top:"50%", left:'50%',transform:"translate(-50%, -50%) "}} src="../../static/landing.jpeg" alt="" />
+      <img style={{position:"absolute", width:'1500px', zIndex:'-1', top:"50%", left:'50%',transform:"translate(-50%, -50%) "}} src={landingImg} alt="" />
 
       <Paper boxShadow={3}  sx={{backgroundColor:'rgba(0,0,0,0.75)',padding:'60px', borderRadius:"30px"}} >
       <Typography border={2} textAlign={"center"} variant="h2"  color={'white'}>The Recipe Hut</Typography>
