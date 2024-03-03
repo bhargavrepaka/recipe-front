@@ -40,7 +40,7 @@ export default function SignIn() {
     if (!newErrors.email && !newErrors.password) {
       console.log(formData);
       try {
-        const result = await axios.post("http://localhost:8080/api/user/signin",{...formData})
+        const result = await axios.post("https://recipe-back-kygs.onrender.com/api/user/signin",{...formData})
         console.log(result)
         localStorage.setItem('authToken', result.data.token);
         setUser(result.data.user)

@@ -12,7 +12,7 @@ const Profile = () => {
   const navigate = useNavigate()
   const [open, setOpen] = useState(false);
   const { user } = useUser()
-  const { userRecipies, setUserRecipies } = useRecipe()
+  const { userRecipies, setUserRecipies,setAllRecipes,allRecipes } = useRecipe()
   const [loading, setLoading] = useState(false)
   const [create, setCreate] = useState(false)
   const [edit, setEdit] = useState(false)
@@ -97,9 +97,9 @@ const Profile = () => {
         }
       });
 
-      setUserRecipies([...userRecipies, result.data.recipe]);
+      setUserRecipies([...userRecipies, result.data.recipe])
+      setAllRecipes([...allRecipes, result.data.recipe])
       toast.success("Created Successfully");
-
     } catch (error) {
       console.log(error);
     }
@@ -114,6 +114,7 @@ const Profile = () => {
       });
 
       setUserRecipies(userRecipies.map(recipe => recipe._id === result.data.recipe._id ? result.data.recipe : recipe));
+      setAllRecipes(allRecipes.map(recipe => recipe._id === result.data.recipe._id ? result.data.recipe : recipe))
       toast.success("Updated Successfully");
     } catch (error) {
       console.log(error);

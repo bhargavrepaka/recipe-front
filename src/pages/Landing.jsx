@@ -46,9 +46,9 @@ const Landing = () => {
       <img style={{position:"absolute", width:'1500px', zIndex:'-1', top:"50%", left:'50%',transform:"translate(-50%, -50%) "}} src="../../static/landing.jpeg" alt="" />
 
       <Paper boxShadow={3}  sx={{backgroundColor:'rgba(0,0,0,0.75)',padding:'60px', borderRadius:"30px"}} >
-      <Typography border={2} textAlign={"center"} variant="h1"  color={'white'}>The Recipe Hut</Typography>
-      <Typography mt={2} textAlign={"center"} variant="h2" color={'white'}>The best place to find your favorite recipes</Typography>
-      <Typography mt={2} textAlign={"center"} variant="h3" color={'white'}>{isAuth? "Head home and ":"Sign In to"} surf through the multiverse of reciepes </Typography>
+      <Typography border={2} textAlign={"center"} variant="h2"  color={'white'}>The Recipe Hut</Typography>
+      <Typography mt={2} textAlign={"center"} variant="h3" color={'white'}>The best place to find your favorite recipes</Typography>
+      <Typography mt={2} textAlign={"center"} variant="h4" color={'white'}>{isAuth? "Head home and ":"Sign In to"} surf through the multiverse of reciepes </Typography>
 
 
       </Paper>
